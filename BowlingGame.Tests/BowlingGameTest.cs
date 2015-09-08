@@ -16,5 +16,17 @@ namespace BowlingGame.Tests
         {
             Assert.True(true);
         }
+
+        [Test]
+        public void TestGutterGame()
+        {
+            var game = new Game();
+
+            for (var i = 0; i < 20; i++)
+                game.Roll(0);
+
+            Assert.AreEqual(0, game.Score());
+
+        }
     }
 }
